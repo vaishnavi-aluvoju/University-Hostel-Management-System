@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h3>Add Staff</h3>
+<form method="post">
+  <div class="mb-3"><label>Full name</label><input class="form-control" name="fullname" required></div>
+  <div class="mb-3"><label>Role</label><input class="form-control" name="role"></div>
+  <div class="mb-3"><label>Phone</label><input class="form-control" name="phone"></div>
+  <div class="mb-3"><label>Email</label><input class="form-control" name="email"></div>
+  <div class="mb-3"><label>Assigned Block</label>
+    <select class="form-control" name="assigned_block">
+      <option value="">--none--</option>
+      {% for b in blocks %}<option value="{{ b.block_id }}">{{ b.name }}</option>{% endfor %}
+    </select>
+  </div>
+  <button class="btn btn-primary">Add Staff</button>
+</form>
+{% endblock %}

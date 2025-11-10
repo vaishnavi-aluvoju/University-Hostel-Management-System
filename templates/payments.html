@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h3>Payments <a class="btn btn-sm btn-success" href="{{ url_for('add_payment') }}">Record Payment</a></h3>
+<table class="table"><thead><tr><th>ID</th><th>Student</th><th>Amount</th><th>For Month</th><th>Date</th><th>Mode</th></tr></thead>
+<tbody>
+{% for p in payments %}
+  <tr><td>{{ p.payment_id }}</td><td>{{ p.student.fullname }}</td><td>{{ p.amount }}</td><td>{{ p.for_month }}</td><td>{{ p.payment_date }}</td><td>{{ p.payment_mode }}</td></tr>
+{% endfor %}
+</tbody></table>
+{% endblock %}

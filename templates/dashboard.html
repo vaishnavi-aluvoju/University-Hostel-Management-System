@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard</h2>
+<div class="row">
+  <div class="col-md-4"><div class="card p-3">Total Students: <strong>{{ total_students }}</strong></div></div>
+  <div class="col-md-4"><div class="card p-3">Total Rooms: <strong>{{ total_rooms }}</strong></div></div>
+  <div class="col-md-4"><div class="card p-3">Vacant Rooms: <strong>{{ vacant_rooms }}</strong></div></div>
+</div>
+{% endblock %}

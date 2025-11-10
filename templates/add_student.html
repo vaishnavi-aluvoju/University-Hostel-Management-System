@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h3>Add Student</h3>
+<form method="post">
+  <div class="mb-3"><label>Admission No</label><input class="form-control" name="admission_no"></div>
+  <div class="mb-3"><label>Full name</label><input class="form-control" name="fullname" required></div>
+  <div class="mb-3"><label>Email</label><input class="form-control" name="email"></div>
+  <div class="mb-3"><label>Phone</label><input class="form-control" name="phone"></div>
+  <div class="mb-3"><label>Department</label><input class="form-control" name="department"></div>
+  <div class="mb-3"><label>Year</label><input class="form-control" name="year_of_study" type="number"></div>
+  <div class="mb-3"><label>Date of birth</label><input class="form-control" name="date_of_birth" type="date"></div>
+  <div class="mb-3"><label>Join Date</label><input class="form-control" name="join_date" type="date" required></div>
+
+  <button class="btn btn-primary">Add</button>
+</form>
+{% endblock %}
+

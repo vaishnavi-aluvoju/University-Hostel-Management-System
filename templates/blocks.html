@@ -1,0 +1,7 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h3>Blocks <a class="btn btn-sm btn-success" href="{{ url_for('add_block') }}">Add Block</a></h3>
+<table class="table"><thead><tr><th>ID</th><th>Name</th><th>Address</th><th>Floors</th></tr></thead>
+<tbody>{% for b in blocks %}<tr><td>{{ b.block_id }}</td><td>{{ b.name }}</td><td>{{ b.address }}</td><td>{{ b.total_floors }}</td></tr>{% endfor %}</tbody></table>
+{% endblock %}

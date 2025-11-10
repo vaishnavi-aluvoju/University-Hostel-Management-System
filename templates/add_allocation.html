@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h3>Allocate Room</h3>
+<form method="post">
+  <div class="mb-3"><label>Student</label><select class="form-control" name="student_id">{% for s in students %}<option value="{{ s.student_id }}">{{ s.fullname }} ({{ s.admission_no }})</option>{% endfor %}</select></div>
+  <div class="mb-3"><label>Room (vacant)</label><select class="form-control" name="room_id">{% for r in rooms %}<option value="{{ r.room_id }}">{{ r.room_no }} - {{ r.block.name }} (vacant: {{ r.capacity - r.occupancy }})</option>{% endfor %}</select></div>
+  <div class="mb-3"><label>Notes</label><input class="form-control" name="notes"></div>
+  <button class="btn btn-primary">Allocate</button>
+</form>
+{% endblock %}

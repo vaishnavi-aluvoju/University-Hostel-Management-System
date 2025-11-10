@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h3>Add Block</h3>
+<form method="post">
+  <div class="mb-3"><label>Name</label><input class="form-control" name="name" required></div>
+  <div class="mb-3"><label>Address</label><input class="form-control" name="address"></div>
+  <div class="mb-3"><label>Total floors</label><input class="form-control" name="total_floors" type="number"></div>
+  <button class="btn btn-primary">Add Block</button>
+</form>
+{% endblock %}

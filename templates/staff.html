@@ -1,0 +1,7 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h3>Staff <a class="btn btn-sm btn-success" href="{{ url_for('add_staff') }}">Add Staff</a></h3>
+<table class="table"><thead><tr><th>ID</th><th>Name</th><th>Role</th><th>Phone</th><th>Email</th><th>Block</th></tr></thead>
+<tbody>{% for s in staff_list %}<tr><td>{{ s.staff_id }}</td><td>{{ s.fullname }}</td><td>{{ s.role }}</td><td>{{ s.phone }}</td><td>{{ s.email }}</td><td>{{ s.block.name if s.block else '' }}</td></tr>{% endfor %}</tbody></table>
+{% endblock %}

@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h3>Students <a class="btn btn-sm btn-success" href="{{ url_for('add_student') }}">Add Student</a></h3>
+<table class="table table-striped">
+  <thead><tr><th>ID</th><th>Name</th><th>Admission No</th><th>Dept</th><th>Year</th><th>Email</th></tr></thead>
+  <tbody>
+  {% for s in students %}
+    <tr>
+      <td>{{ s.student_id }}</td><td>{{ s.fullname }}</td><td>{{ s.admission_no }}</td><td>{{ s.department }}</td><td>{{ s.year_of_study }}</td><td>{{ s.email }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
